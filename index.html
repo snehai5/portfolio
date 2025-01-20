@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/c811b39c10.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const technicalTitle = document.getElementById("technical-title");
+            const professionalTitle = document.getElementById("professional-title");
+            const technicalContainer = document.getElementById("technical-container");
+            const professionalContainer = document.getElementById("professional-container");
+          
+            // Function to toggle active sections
+            const toggleSection = (activeTitle, inactiveTitle, activeContainer, inactiveContainer) => {
+              activeTitle.classList.add("active");
+              inactiveTitle.classList.remove("active");
+              activeContainer.classList.add("active");
+              inactiveContainer.classList.remove("active");
+            };
+          
+            // Event listeners for title bars
+            technicalTitle.addEventListener("click", () => {
+              toggleSection(technicalTitle, professionalTitle, technicalContainer, professionalContainer);
+            });
+          
+            professionalTitle.addEventListener("click", () => {
+              toggleSection(professionalTitle, technicalTitle, professionalContainer, technicalContainer);
+            });
+          });
+          
+    </script>
+    <div id="header">
+        <div class="container">
+            <nav class="horizontal-nav">
+                <h1 class="portfolio-title"><span>Portfolio</span></h1>
+                <div class="hamburger">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skill">Skills</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>Hi!</h1>
+                <h1>I'm <span>Sneha </span>Ramu from India</h1>
+                <br>
+                <p><span>Front-end Developer</span></p>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+          <div class="row">
+            <div class="about-col-1">
+              <div class="image-box">
+                <img src="image/Sneha_R__2_-removebg-preview.png" alt="Sneha Ramu">
+              </div>
+            </div>
+            <div class="about-col-2">
+              <h1 class="sub-title">About<span1> Me</span1></h1>
+              <p class="about-text">
+                A dedicated and ambitious front-end developer who is eager to hone my skills and expand my knowledge in the ever-evolving field of web development. With a strong foundation in both front-end and back-end technologies, I am particularly passionate about creating user-friendly websites and applications. I meticulously design and develop seamless, intuitive user interfaces that enhance the user experience, ensuring that every interaction feels smooth and effortless. My commitment to continuous learning and staying updated with the latest industry trends drives me to integrate best practices and innovative solutions into my projects. By focusing on performance optimization and responsive design, I strive to deliver websites and applications that meet user expectations, providing a flawless and engaging digital experience.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <h1 class="sub-title">My<span1> Skills</span1></h1>
+      <section id="skills">
+        <!-- Title Bar -->
+        <div class="title-bar-container">
+            <div class="title-bar active" id="technical-title">Technical Skills</div>
+            <div class="title-bar" id="professional-title">Professional Skills</div>
+        </div>
+    
+        <!-- Technical Skills Progress Bars -->
+        <div class="container1 technical-bars">
+            <div class="bar">
+                <i class="fa-brands fa-html5"></i>
+                <div class="info">HTML</div>
+                <div class="progress-line html"><span></span></div>
+            </div>
+            <div class="bar">
+                <i class="fa-brands fa-css3-alt"></i>
+                <div class="info">CSS</div>
+                <div class="progress-line css"><span></span></div>
+            </div>
+            <div class="bar">
+                <i class="fa-brands fa-js"></i>
+                <div class="info">
+                    <span>JavaScript</span>
+                </div>
+                <div class="progress-line javascript">
+                    <span></span>
+                </div>
+            </div>
+            <div class="bar">
+                <i class="fa-brands fa-java"></i>
+                <div class="info">
+                    <span>Java</span>
+                </div>
+                <div class="progress-line java">
+                    <span></span>
+                </div>
+            </div>
+            <div class="bar">
+                <i class="fa-solid fa-database"></i>
+                <div class="info">
+                    <span>MySQL</span>
+                </div>
+                <div class="progress-line mysql">
+                    <span></span>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+        <!-- Professional Skills Progress Bars -->
+        <div class="container1 professional-bars">
+            <div class="bar">
+                <div class="info">Critical Thinking</div>
+                <div class="progress-line critical-thinking"><span></span></div>
+            </div>
+            <div class="bar">
+                <div class="info">Communication</div>
+                <div class="progress-line communication"><span></span></div>
+            </div>
+            <div class="bar">
+                <div class="info">Problem Solving</div>
+                <div class="progress-line critical-thinking"><span></span></div>
+            </div>
+            <div class="bar">
+                <div class="info">Team Work</div>
+                <div class="progress-line communication"><span></span></div>
+            </div>
+        </div>
+    </section>
+
+
+    <div id="services">
+        <div class="container2">
+            <h1 class="sub-title">My<span1> Services</span1></h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                </br>
+                    <p>Web design involves creating the visual layout and user experience of websites. It combines elements like layout, color schemes, typography, and images to create an aesthetically pleasing and functional site.It ensures the website is visually appealing, easy to use, and accessible on various devices. Tools and technologies commonly used in web design include HTML, CSS, JavaScript</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>UI/UX Design</h2>
+                </br>
+                    <p>UI design focuses on the visual elements of a product, such as layout, colors, and typography, ensuring that the interface is aesthetically pleasing and consistent. UX design centers on the overall experience of the user when interacting with the product, emphasizing usability, accessibility, and efficiency.It aims to create products that are both functional and enjoyable to use.</p>
+                    <a href="#">Learn more</a>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div id="portfolio">
+        <div class="container3">
+            <h1 class="sub-title">My<span1> Works</span1></h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="image/calculator.png">
+                    <div class="layer">
+                    </br>
+                        <h3>Simple Calculator</h3>
+                    </br>
+                        <p>
+                            A simple front-end calculator uses HTML, CSS, and JavaScript to create a basic interactive interface for performing arithmetic operations.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="image/work2.png">
+                    <div class="layer">
+                </br>
+                <h3>Automatic Form Filling System for Fertilizer Inspectors website </h3>
+            </br>
+                        <p>Ensure a smooth UI/UX by optimizing for fast loading and enabling generation of 50+ sample forms for fertilizer inspectors by reducing manual errors.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container4">
+            <h1 class="sub-title">Contact<span1> Me</span1></h1>
+            <p><i class="fa-solid fa-envelope"></i>   
+                <a href="mailto:diyasneha25@gmail.com">diyasneha25@gmail.com</a>
+            </p>
+            <p><i class="fa-solid fa-phone"></i>   
+               8754833185</a>
+            </p>
+            <p><i class="fa-brands fa-linkedin"></i>   
+                <a href="https://www.linkedin.com/in/sneha-ramu-0b6440285" target="_blank">LinkedIn Profile</a>
+            </p>
+            <p><i class="fa-brands fa-github"></i>   
+                <a href="https://github.com/snehai5" target="_blank">GitHub Profile</a>
+            </p>
+         <div class="social-icons">
+            <a href="image/SNEHA R_RESUME.pdf" download class="btn btn2"> Download CV</a>
+        </div>
+    </div>
+</div>
+
+<div class="copyright">
+    <p>Copyright @ 2024 Sneha.</p>
+
+</div>
+</body>
+</html>
+
+    
