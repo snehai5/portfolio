@@ -9,42 +9,17 @@
 </head>
 
 <body>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const technicalTitle = document.getElementById("technical-title");
-            const professionalTitle = document.getElementById("professional-title");
-            const technicalContainer = document.getElementById("technical-container");
-            const professionalContainer = document.getElementById("professional-container");
-          
-            // Function to toggle active sections
-            const toggleSection = (activeTitle, inactiveTitle, activeContainer, inactiveContainer) => {
-              activeTitle.classList.add("active");
-              inactiveTitle.classList.remove("active");
-              activeContainer.classList.add("active");
-              inactiveContainer.classList.remove("active");
-            };
-          
-            // Event listeners for title bars
-            technicalTitle.addEventListener("click", () => {
-              toggleSection(technicalTitle, professionalTitle, technicalContainer, professionalContainer);
-            });
-          
-            professionalTitle.addEventListener("click", () => {
-              toggleSection(professionalTitle, technicalTitle, professionalContainer, technicalContainer);
-            });
-          });
-          
-    </script>
     <div id="header">
         <div class="container">
             <nav class="horizontal-nav">
                 <h1 class="portfolio-title"><span>Portfolio</span></h1>
-                <div class="hamburger">
+                <div class="hamburger" id="hamburger">
                     <span class="line"></span>
                     <span class="line"></span>
                     <span class="line"></span>
                 </div>
-                <ul class="nav-links">
+                <div class="close-btn" id="close-btn">✖</div>
+                <ul class="nav-links" id="nav-links">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#skill">Skills</a></li>
@@ -53,6 +28,8 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+    </div>
+    
             <div class="header-text">
                 <h1>Hi!</h1>
                 <h1>I'm <span>Sneha </span>Ramu from India</h1>
@@ -79,7 +56,7 @@
         </div>
       </div>
       
-      <h1 class="sub-title">My<span1> Skills</span1></h1>
+      <h1 id ="skill"class="sub-title">My<span1> Skills</span1></h1>
       <section id="skills">
         <!-- Title Bar -->
         <div class="title-bar-container">
@@ -221,7 +198,7 @@
                 <a href="https://github.com/snehai5" target="_blank">GitHub Profile</a>
             </p>
          <div class="social-icons">
-            <a href="image/SNEHA R_RESUME.pdf" download class="btn btn2"> Download CV</a>
+            <a href="image/SNEHA RESUME.pdf" download class="btn btn2"> Download CV</a>
         </div>
     </div>
 </div>
@@ -230,6 +207,26 @@
     <p>Copyright @ 2024 Sneha.</p>
 
 </div>
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+const closeBtn = document.getElementById('close-btn');
+
+// Open the navigation menu
+hamburger.addEventListener('click', () => {
+    navLinks.classList.add('active'); // Show nav
+    hamburger.style.display = 'none'; // Hide hamburger
+    closeBtn.style.display = 'flex'; // Show close button
+});
+
+// Close the navigation menu
+closeBtn.addEventListener('click', () => {
+    navLinks.classList.remove('active'); // Hide nav
+    hamburger.style.display = 'flex'; // Show hamburger
+    closeBtn.style.display = 'none'; // Hide close button
+});
+</script>
 </body>
 </html>
 
