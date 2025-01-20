@@ -713,3 +713,269 @@ body {
   
   }
 
+  /* Responsive Styles for 1080px (larger mobile screens like Redmi 9 Prime) */
+@media screen and (max-width: 1080px) {
+
+  /* General Styles for header-text */
+  .hamburger {
+    display: none; /* Hidden by default for larger screens */
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 10;
+  }
+  
+  .hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: #fcf5f5;
+    border-radius: 3px;
+  }
+  
+  .close-btn {
+    display: none; /* Hidden initially */
+    color: white; /* Visible on dark backgrounds */
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 10;
+    
+  }
+  
+  /* Navigation Links */
+  .nav-links {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #0c0c0c;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 5;
+  }
+  
+  .nav-links.active {
+    display: flex; /* Show navigation when active */
+  }
+  
+  .hamburger {
+    display: flex; /* Show hamburger menu on small screens */
+  }
+  
+  .close-btn {
+    display: none; /* Initially hidden */
+  }
+  
+  .nav-links.active ~ .close-btn {
+    display: flex; /* Show close button when nav is active */
+  }
+  .header-text {
+    margin-top: auto; /* Push text to the bottom */
+    margin-bottom: 5%; /* Add some space at the bottom */
+    text-align: center; /* Align text to the right */
+    position: absolute; /* Position relative to its container */
+    bottom: 30px; /* Stick to the bottom */
+    right: 0; /* Stick to the right */
+    padding: 10px; /* Add some padding */
+    color: #fff; /* Ensure text is visible */
+}
+
+.header-text h1 {
+    font-size: 40px; /* Reduce font size for smaller screens */
+}
+
+.header-text p {
+    font-size: 18px; /* Adjust font size for better readability */
+}
+
+  /* About Section */
+  #about .row {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .about-col-1 {
+    flex-basis: 40%;
+    margin-right: 20px;
+    position: relative;
+    transform: translateX(-20px);
+  }
+
+  .about-col-1 .image-box {
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    background-color: #0f0f0f;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 15px 40px #f01867eb;
+    animation: moveUpDown 3s infinite ease-in-out;
+  }
+
+  .about-col-1 img {
+    border-radius: 15px;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .about-col-2 {
+    flex-basis: 50%;
+    text-align: justify;
+  }
+
+  .sub-title {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 600;
+    color: #fffefe;
+    margin-top: 50px;
+  }
+
+  .sub-title span1 {
+    color: #f01867eb;
+  }
+
+  .about-text {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #ffffff;
+    margin-top: 20px;
+  }
+
+  @keyframes moveUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  /* Services Section */
+  #services {
+    padding: 30px 0;
+    margin-top: 50px;
+  }
+
+  .services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin: 50px 0;
+  }
+
+  .services-list div {
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+  }
+
+  .services-list div i {
+    font-size: 50px;
+    margin-bottom: 30px;
+  }
+
+  .services-list div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+
+  .services-list div a {
+    text-decoration: none;
+    color: #d0ced6eb;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+  }
+
+  .services-list div:hover {
+    background: #f01867eb;
+    transform: translateY(10px);
+  }
+
+  .container3.sub-title {
+    padding: 10px 10%;
+    margin-top: 20px;
+  }
+
+  /* Work List Section */
+  .work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin: 50px 0;
+  }
+
+  .work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .work img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+  }
+
+  .layer {
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0.6),#ff0e7e);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+  }
+
+  .layer h3 {
+    font-weight: 500px;
+    margin-bottom: 20px;
+  }
+
+  .layer a {
+    margin-top: 20px;
+    color: #ff0e7e;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+  }
+
+  .work:hover img {
+    transform: scale(1.1);
+  }
+
+  .work:hover .layer {
+    height: 100%;
+  }
+}
+
